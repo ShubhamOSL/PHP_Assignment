@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+button {
+  background-color: rgb(67, 82, 192);
+  color: black;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+input {
+  background-color: transparent;
+  color: rgb(67, 82, 192);
+  border: 1px solid rgb(67, 82, 192);
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container .container__header {
+  min-height: 100px;
+  color: rgb(67, 82, 192);
+  background-color: rgb(196, 227, 18);
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  position: relative;
+}
+.container .container__header img {
+  max-width: 60px;
+  max-height: 60px;
+  margin-right: 10px;
+}
+.container .container__header .link {
+  right: 0px;
+  margin-left: auto;
+  font-size: 1.4rem;
+}
+.container .container__header .link a {
+  color: rgb(67, 82, 192);
+  text-decoration: none;
+}
+.container .container__body {
+  flex: 1;
+  background-size: cover;
+  display: flex;
+}
+.container .container__body .container__body__content {
+  font-size: 3rem;
+  text-align: center;
+  margin: auto;
+}
+.container .container__footer {
+  min-height: 100px;
+  color: rgb(67, 82, 192);
+  background-color: rgb(63, 63, 63);
+  padding: 5px 10px;
+}
+.container .bigheading {
+  font-size: 3rem;
+}
+.container .footer {
+  font-size: 2.5rem;
+}
+
+form {
+  margin-left: 10%;
+  margin-top: 10%;
+  width: fit-content;
+}
+form input {
+  margin: 10px 0px;
+}
+form button {
+  margin: 10px 0px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
