@@ -10,9 +10,15 @@ include 'include_common/header.php' ?>
 
 <div class="d-flex justify-content-center align-items-center">
     <div class="container my-5">
+        <a href="profile.php">profile</a>
+        <a href="logout.php">logout</a>
+
         <h1 class="text-center my-5">Country City State</h1>
         <div class="card">
             <div class="card-body">
+
+             <form action="final.php" method="post">
+
                 <div class="input-group mb-3">
                     <select class="form-select" id="country" name="country">
                         <option selected disabled>Select Country</option>
@@ -31,6 +37,8 @@ include 'include_common/header.php' ?>
                         <option selected disabled>Select City</option>
                     </select>
                 </div>
+                <button type="submit">submit</button>
+            </form>
             </div>
         </div>
     </div>
