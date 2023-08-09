@@ -29,10 +29,10 @@ if($_SERVER["REQUEST_METHOD"]== "POST")
 
   // mysqli_real_escape_string()
 
-   mysqli_select_db($conn1, "AA3");
+  //  mysqli_select_db($conn1, "AA3");
 
-    $insert="insert into user_profiles2 (Country,State,City) values ('$row1[name]','$row2[name]','$row3[name]');";
-    var_dump($insert);
+    $insert="insert into user_profiles2 (Country,State,City) values ('{$row1['name']}','{$row2['name']}','{$row3['name']}');";
+    // var_dump($insert);
     $m=mysqli_query($conn1,$insert);
 
 
