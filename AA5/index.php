@@ -7,8 +7,8 @@ $msg="";
 $city="";
 if(isset($_POST['submit'])){
    $city=$_POST['city'];
-    $url="http://api.openweathermap.org/data/2.5/weather?q=" . $city . "&appid=49c0bad2c7458f1c76bec9654081a661";
-   // $url = "https://api.openweathermap.org/data/2.5/weather?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=49c0bad2c7458f1c76bec9654081a661";
+   //  $url="http://api.openweathermap.org/data/2.5/weather?q=" . $city . "&appid=49c0bad2c7458f1c76bec9654081a661";
+   $url = "https://api.openweathermap.org/data/2.5/weather?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=49c0bad2c7458f1c76bec9654081a661";
    //  $city=$_POST['city'];
    $ch = curl_init();
    // var_dump($ch);
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
    <body>
       <div class="form">
          <form style="width:100%;" method="post">
-            <input type="text" class="text" placeholder="Enter city name" name="city" value="<?php echo $city?>"/>
+            <input type="text" class="text" placeholder="enter name" name="city" />
             <input type="submit" value="Submit" class="submit" name="submit"/>
             <?php echo $msg?>
          </form>
@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
             </div>
             <div class="description mr45">
                <div class="weatherCondition"><?php echo $result['weather'][0]['main']?></div>
-               <div class="place"><?php echo $result['name']?></div>
+               <!-- <div class="place"><?php echo $result['name']?></div> -->
             </div>
             <div class="description">
                <div class="weatherCondition">Wind</div>
@@ -66,6 +66,7 @@ if(isset($_POST['submit'])){
             <?php echo date('d M',$result['dt'])?> 
              
          </div>
+         
       </article>
       <?php } ?>
    </body>
