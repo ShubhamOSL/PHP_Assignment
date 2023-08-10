@@ -1,4 +1,7 @@
+
 <?php
+    require("database.php");
+
     function isvalid()
     {
         session_start();
@@ -32,6 +35,8 @@
         if(isset($_POST["email"]) and isset( $_POST["name"]) )
         {
             $_POST["email__success"] = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
+            $Name=$_POST["name"];
+            $Email=$_POST["email"];
             $cookie_name="username";
             $cookie_value=$_POST["name"];
             setcookie($cookie_name, $cookie_value, time() + 120, "/"); 

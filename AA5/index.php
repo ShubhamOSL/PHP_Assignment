@@ -1,4 +1,15 @@
 <?php
+
+
+
+
+
+
+
+
+
+
+
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
@@ -7,8 +18,8 @@ $msg="";
 $city="";
 if(isset($_POST['submit'])){
    $city=$_POST['city'];
-   //  $url="http://api.openweathermap.org/data/2.5/weather?q=" . $city . "&appid=49c0bad2c7458f1c76bec9654081a661";
-   $url = "https://api.openweathermap.org/data/2.5/weather?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=49c0bad2c7458f1c76bec9654081a661";
+    $url="http://api.openweathermap.org/data/2.5/weather?q=" . $city . "&appid=49c0bad2c7458f1c76bec9654081a661";
+   // $url = "https://api.openweathermap.org/data/2.5/weather?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=49c0bad2c7458f1c76bec9654081a661";
    //  $city=$_POST['city'];
    $ch = curl_init();
    // var_dump($ch);
@@ -38,7 +49,7 @@ if(isset($_POST['submit'])){
    <body>
       <div class="form">
          <form style="width:100%;" method="post">
-            <input type="text" class="text" placeholder="enter name" name="city" />
+            <input type="text" class="text" placeholder="enter city" name="city" />
             <input type="submit" value="Submit" class="submit" name="submit"/>
             <?php echo $msg?>
          </form>
